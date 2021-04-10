@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_4_jQuery入口函数的其他写法</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        //第一种写法
+        $(document).ready(function () {
+            alert("Hello1");
+
+        });
+
+        //第二种写法
+        jQuery(document).ready(function () {
+            alert("Hello2")
+        })
+
+        //第三种写法(推荐)
+        $(function () {
+            alert("Hello3");
+        });
+
+        //第四种写法
+        jQuery(function () {
+            alert("Hello4");
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

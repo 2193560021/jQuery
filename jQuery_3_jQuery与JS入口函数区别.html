@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_3_jQuery与JS入口函数区别</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        /*window.onload = function (ev) {
+            var img  = img =document.getElementsByTagName("img")[0];
+            console.log(img);
+            var width = window.getComputedStyle(img).width;
+            console.log("onload",width);
+        }
+
+        $(document).ready(function () {
+            //拿到DOM元素
+            var $img = $("img")[0];
+            console.log($img);
+
+            var $width = $img.width;
+            console.log("ready",$width);
+        });*/
+
+        /*
+        1.原生JS若编写多个入口，后写的会覆盖前面写的
+        2.jQuery中，后面不会覆盖前面的
+        */
+        // window.onload = function (ev) {
+        //     alert("hello laj1");
+        // }
+        // window.onload = function (ev) {
+        //     alert("hello laj2");
+        // }
+        //
+        $(document).ready(function () {
+            alert("hello laj1");
+
+        });
+        $(document).ready(function () {
+            alert("hello laj2");
+
+        });
+    </script>
+</head>
+<body>
+    <img src="https://img.alicdn.com/simba/img/TB1OlsJc8Bh1e4jSZFhSuwC9VXa.jpg" alt="">
+</body>
+</html>
