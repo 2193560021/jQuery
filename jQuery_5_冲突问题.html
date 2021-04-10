@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery_5_冲突问题</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        //1.释放$的使用权↓↓↓
+        //注意点：释放操作必须在编写其他jQuery代码之前，改用jQUery
+        jQuery.noConflict();
+        //2.自定义一个符号
+        var nj = jQuery.noConflict();
+        nj(function () {
+            alert("Hello lnj");
+
+        })
+    </script>
 </head>
 <body>
 
