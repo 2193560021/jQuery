@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_8_静态方法和实例方法</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        // 1.定义一个类
+        function Aclass() {
+
+        }
+        // 2.给这个类添加一个静态方法
+            //直接添加给类的就是静态方法
+        Aclass.staticMethod = function () {
+            alert("staticMethod");
+        }
+            // 静态方法通过类名调用
+        Aclass.staticMethod();
+
+        // 3.给这个类添加一个实例方法
+        Aclass.prototype.instanceMethod = function () {
+            alert("instanceMethod");
+        }
+            //实例方法通过类的实例调用
+        var a = new Aclass();
+        a.instanceMethod();
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
