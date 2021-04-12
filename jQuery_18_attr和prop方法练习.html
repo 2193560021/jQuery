@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuer_18_attr和prop方法练习</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //1.给按钮添加点击事件
+            var btn = document.getElementsByTagName("button")[0];
+            btn.onclick = function () {
+                var input = document.getElementsByTagName("input")[0];
+                var text = input.value;
+                $("img").attr("src",text);
+
+            }
+            //2.获取输入框输入值
+            //3.修改img的src属性节点的值
+            
+        });
+    </script>
+</head>
+<body>
+<input type="text">
+<button>切换图片</button>
+<br>
+<img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
+</body>
+</html>

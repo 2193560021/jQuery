@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_17_jQuery的prop方法</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            /*
+                1.prop方法
+                    特点和attr一致
+                2.removeProp方法
+            */
+
+            $("span").eq(0).prop("demo","it666");
+            $("span").eq(1).prop("demo","lnj");
+            // console.log($("span").prop("demo"));
+
+            $("span").removeProp("demo");
+            /*
+                注意点：
+                    prop方法不仅能够操作属性，还能操作属性结点
+            */
+
+            // console.log($("span").prop("class"));
+
+            console.log($("input").prop("checked"));
+            console.log($("input").attr("checked"));
+        });
+    </script>
+</head>
+<body>
+<span class="span1" name="it666"></span>
+<span class="span2" name="lnj"></span>
+
+<input type="checkbox">
+</body>
+</html>
