@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_20_jQuery文本值相关方法</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            /*
+            1.html([val|fn])
+                和原生JS中的innerHTML一模一样
+            2.text([val|fn])
+            3.val([val|fn|arr])
+            */
+
+            var btns = $("button");
+            btns[0].onclick = function () {
+                $("div").html("<p>I am <a href='#'>链接</a> P</p>");
+            };
+            btns[1].onclick = function () {
+                console.log($("div").html());
+            };
+            btns[2].onclick = function () {
+                $("div").text("<p>I am <a href='#'>链接</a> P</p>");
+            };
+            btns[3].onclick = function () {
+                console.log($("div").text());
+            };
+            btns[4].onclick = function () {
+                $("input").val("请输入内容");
+            };
+            btns[5].onclick = function () {
+                console.log($("input").val());
+            };
+            btns[6].onclick = function () {
+                $("div").text("");
+            };
+        });
+    </script>
+</head>
+<body>
+<button>设置HTML</button>
+<button>获取HTML</button>
+<button>设置text</button>
+<button>获取text</button>
+<button>设置value</button>
+<button>获取value</button>
+<button>清空</button>
+<div></div>
+<input type="text">
+</body>
+</html>
