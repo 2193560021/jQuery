@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_25_事件移除</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //  编写jQuery代码
+
+            function test1() {
+                alert("Hello");
+            }
+
+            function test2() {
+                alert("123");
+            }
+
+            $("button").click(test1);
+            $("button").click(test2);
+            $("button").mouseover(function () {
+                alert("Mouseleaving it");
+            })
+            $("button").on("click",function () {
+                alert("Hello2");
+            });
+
+            //如果不传递参数，会移除所有事件
+            $("button").off("click",test1);
+        });
+    </script>
+</head>
+<body>
+<button>我是按钮</button>
+</body>
+</html>
