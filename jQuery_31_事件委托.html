@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery_31_事件委托</title>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            /*
+                 1.什么是事件委托？
+                    请别人帮忙做事情，然后将结果反馈给我们
+            */
+            $("button").click(function () {
+                $("ul").append("<li>我是新增的</li>")
+
+            });
+
+            /*
+                 在jQuery中，如果通过核心函数找到的元素不止一个，那么在添加事件的时候jQuery会遍历所有找到的元素，给所有找到的元素添加事件
+            */
+        //     $("ul>li").click(function () {
+        //         console.log($(this).html());
+        //
+        //     })
+        // });
+
+        $("ul").delegate("li","click",function () {
+            console.log($(this).html());
+            })
+        });
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>我的是一个</li>
+    <li>我是第二个</li>
+    <li>我是的三个</li>
+</ul>
+<button>新增一个li</button>
+</body>
+</html>
