@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            max-width: 50%;
+            max-height: 80%;
+            font-size: 20px;
+            margin: 20px auto;
+        }
+    </style>
+    <script src="jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            //  编写jQuery代码
+            var $div = $("div");
+            for(var i = 1;i<=9;i++)
+            {
+                    for (var j = 1;j<=i;j++)
+                        $div.append(j + "*" + i + "=" + i * j + " ")
+                    $div.append("<br/>");
+            }
+        });
+    </script>
+</head>
+<body>
+<div></div>
+</body>
+</html>

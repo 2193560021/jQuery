@@ -32,7 +32,10 @@
                 console.log($("div").html());
             };
             btns[2].onclick = function () {
-                $("div").text("<p>I am <a href='#'>链接</a> P</p>");
+                for (var i = 0;i< 5;i++)
+                {
+                    $("div").text(i + 1);
+                }
             };
             btns[3].onclick = function () {
                 console.log($("div").text());
